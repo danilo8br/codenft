@@ -1,0 +1,297 @@
+#home {
+    position: relative;
+    .grid-layout {
+        .intro {
+            @include flexbox-between;
+            padding-top: 80px;
+            .intro-text {
+                display: flex;
+                flex-direction: column;
+                gap: $gap-3;
+                h1 {
+                    color: $white;
+                    font-family: $font;
+                    font-size: 56px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                    letter-spacing: 2px;
+
+                    b {
+                        background: linear-gradient(270deg, #30b6dd 0%, #7e5eff 100%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+                p {
+                    color: #d2d2d2;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                }
+
+                .botao {
+                    display: flex;
+                    align-items: center;
+                    gap: $gap-5;
+
+                    a {
+                        @include flexbox-center;
+                        width: 200px;
+                        height: 44px;
+                        background: linear-gradient(225deg, #2dc0dc 0%, #7e5eff 86.98%);
+                        border-radius: 2px;
+                        border: none;
+                        cursor: pointer;
+                        color: $white;
+                        font-family: 'Inter';
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 1.6px;
+                        text-transform: uppercase;
+                        letter-spacing: 5px;
+                        border-radius: 5px;
+                    }
+                }
+
+                .mouse {
+                    border: 2px solid #fff;
+                    border-radius: 20px;
+                    display: inline-flex;
+                    height: 40px;
+                    width: 25px;
+
+                    .mouse-wheel {
+                        animation: moveWheel 1.5s ease infinite;
+                        background: $brand-color;
+                        border-radius: 50%;
+                        display: inline-block;
+                        height: 10px;
+                        margin: auto;
+                        width: 2px;
+                    }
+                }
+
+                @keyframes moveWheel {
+                    0% {
+                        opacity: 0;
+                        translate: 0 -16px;
+                    }
+
+                    100% {
+                        opacity: 1;
+                        translate: 0 -4px;
+                    }
+                }
+            }
+
+            .card-nft {
+                position: relative;
+                width: 400px;
+                background: linear-gradient(
+                    138.84deg,
+                    hsla(0, 0%, 100%, 0.132) -6.39%,
+                    hsla(0, 0%, 56%, 0.063) 112.17%
+                );
+                -webkit-backdrop-filter: blur(50px);
+                backdrop-filter: blur(50px);
+                opacity: 1;
+                transform: none;
+                border-radius: 5px;
+                border: 3px solid #7E5EFF;
+                
+
+                img {
+                    
+                    max-width: 100%;
+                    display: block;
+                    border: none;
+                    overflow-clip-margin: content-box;
+                    overflow: clip;
+                    
+                }
+
+
+                .eclipse {
+                    position: absolute;
+                    width: 234.903px;
+                    height: 524.934px;
+                    transform: rotate(40.532deg);
+                    border-radius: 534.903px;
+                    opacity: 0.48;
+                    background: linear-gradient(121deg, rgba(224, 37, 206, 0.48) 0%, rgba(74, 166, 247, 0.48) 100%);
+                    filter: blur(50px);
+                    margin-top: -400px;
+                    animation-name: change-color;
+                    z-index: -1;
+                }
+
+                .eclipse02 {
+                    position: absolute;
+                    width: 544.105px;
+                    height: 515.39px;
+                    transform: rotate(222.637deg);
+                    border-radius: 534.903px;
+                    opacity: 0.48;
+                    background: linear-gradient(121deg, rgba(224, 37, 206, 0.48) 0%, rgba(74, 166, 247, 0.48) 100%);
+                    filter: blur(50px);
+                    margin-top: -400px;
+                    animation-name: change-color;
+                    z-index: -1;
+                }
+
+
+                .top1 {
+                    position: absolute;
+                    top: 16px;
+                    left: 32px;
+                    width: 90px;
+                    background: linear-gradient(
+                        138.84deg,
+                        hsla(0, 0%, 100%, 0.201) -6.39%,
+                        hsla(0, 0%, 100%, 0.063) 112.17%
+                    );
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                    border: 1px solid $brand-color;
+                    border-radius: 5px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    color: $white;
+                    font-family: $font;
+                    padding: 4px;
+                }
+
+                .data-card-nft {
+                    -webkit-backdrop-filter: blur(70px);
+                    backdrop-filter: blur(70px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1rem 2rem;
+                    line-height: 1.75;
+
+                    .text-data-card-nft {
+                        display: flex;
+                        flex-direction: column;
+
+                        span {
+                            font-weight: 600;
+                            color: $white;
+                            font-family: "Inter";
+                        }
+
+                        .small_text {
+                            opacity: 0.7;
+                            font-size: 0.8rem;
+                            font-weight: 400;
+                        }
+
+                        .logo-price,
+                        img {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            font-weight: 600;
+                            margin-top: 12px;
+
+                            span {
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+
+                    a {
+                        @include flexbox-center;
+                        width: 200px;
+                        height: 44px;
+                        background: linear-gradient(225deg, #2dc0dc 0%, #7e5eff 86.98%);
+                        border-radius: 2px;
+                        border: none;
+                        cursor: pointer;
+                        color: $white;
+                        font-family: 'Inter';
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 1.6px;
+                        text-transform: uppercase;
+                        letter-spacing: 5px;
+                        border-radius: 5px;
+                        
+                    }
+                }
+            }
+        }
+
+        .dashboard {
+            background: hsla(0,0%,100%,.1);
+            -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+            border: 3px solid $brand-color;
+            border-radius: 5px;
+            margin-top: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem 0;
+            font-family: 'Orbitron',sans-serif;
+
+            .data-dashboard {
+                @include flexbox-center;
+                flex-direction: column;
+                border-right: 2px solid $brand-color;
+                border-image: linear-gradient(138.34deg,rgba(86, 9, 240, 0.7) -11.36%,rgba(30, 181, 236, 0.7) 51.55%,rgba(182, 36, 230, 0.7) 113.16%) 1;                
+                padding: 0 4rem;
+                margin: 1rem 0;
+                line-height: 1.75;
+
+                .text-data-dashboard {
+                    font-size: 3.052rem;
+                    font-weight: 600;
+                    display: block;
+                    color: $white;
+                }
+
+                .text2-data-dashboard {
+                    text-transform: uppercase;
+                    font-size: 1.25rem;
+                    text-align: center;
+                    font-family: Inter;
+                    color: #d2d2d2;
+                }
+            }
+
+            .data-dashboard-nobar {
+                @include flexbox-center;
+                flex-direction: column;
+                padding: 0 4rem;
+                margin: 1rem 0;
+                line-height: 1.75;
+
+                .text-data-dashboard {
+                    font-size: 3.052rem;
+                    font-weight: 600;
+                    display: block;
+                    color: $white;
+                }
+
+                .text2-data-dashboard {
+                    text-transform: uppercase;
+                    font-size: 1.25rem;
+                    text-align: center;
+                    font-family: Inter;
+                    color: #d2d2d2;
+                }
+            }
+        }
+    }
+}

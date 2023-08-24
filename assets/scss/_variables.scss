@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+$background: #060015;
+$brand-color:  #7F5FFF;
+$white: #fff;
+
+$font: "Orbitron";
+
+$gap-0: 0px;
+$gap-1: 8px;
+$gap-2: 16px;
+$gap-3: 24px;
+$gap-4: 32px;
+$gap-5: 48px;
+$gap-6: 64px;
+$gap-7: 72px;
+$gap-8: 96px;
+$gap-9: 128px;
+
+@mixin responsive-desktop {
+    @media screen and (max-width: 1180px) {
+        @content;
+    }
+}
+
+@mixin responsive-tablet {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin responsive-mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+// Espaçeamento
+@mixin spacing-section() {
+    padding: $gap-8 $gap-5;
+    @include responsive-tablet {
+        padding: $gap-5 $gap-3;
+    }
+}
+
+@mixin flexbox-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin flexbox-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid-layout() {
+    max-width: 1216px;
+    margin: 0 auto;
+}
+
+
+// Tamanho do Titulo
+@mixin title-section {
+    padding-bottom: $gap-3;
+    color: $title;
+    font: {
+        size: 4rem;
+        weight: 500;
+    }
+}
+

@@ -1,0 +1,115 @@
+.intro-collection {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .title-button-intro-collection {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+            color: $white;
+            font-family: $font;
+            font-size: 1.563rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        a {
+            @include flexbox-center;
+            width: 200px;
+            height: 44px;
+            background: linear-gradient(225deg, #2dc0dc 0%, #7e5eff 86.98%);
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+            color: $white;
+            font-family: "Inter";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            border-radius: 5px;
+        }
+    }
+
+    .table-intro-collection {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+
+        thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit;
+
+            tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+
+                th {
+                    font-family: Inter;
+                    color: $white;
+                    text-align: left;
+                    padding: 0.5rem 0;
+                    border-bottom: 1px solid #333;
+                    display: table-cell;
+                    vertical-align: inherit;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+
+            tr {
+                td {
+                    color: $white;
+                    font-family: Inter;
+                    .profile {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 1rem 0;
+                        color: $white;
+                        span {
+                            img {
+                                max-width: 100%;
+                                display: block;
+                                width: 48px;
+                                aspect-ratio: auto 48 / 48;
+                                height: 48px;
+                                overflow-clip-margin: content-box;
+                                overflow: clip;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
+
+                .value {
+                    display: flex;
+                    flex-direction: column;
+                    color: $white;
+                    font-family: Inter;
+                    line-height: 1.75;
+
+                    .text-value {
+                        font-size: .8rem;
+                        color: #2DC0DC;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@import "./variables", "./reset", "./menu", "./home", "./top-nfts", "./collection", "./faq";
+
+.grid-layout {
+    @include grid-layout();
+}
