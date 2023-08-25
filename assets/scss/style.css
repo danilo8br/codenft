@@ -21,9 +21,18 @@ body {
   background: #060015;
 }
 
-header .grid-layout .logo {
+header .grid-layout .logo-name {
+  display: flex;
   align-items: center;
+  gap: 6px;
   padding-top: 28px;
+}
+header .grid-layout .logo-name span {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Orbitron";
+  color: #fff;
 }
 header .grid-layout nav {
   display: flex;
@@ -50,8 +59,17 @@ header .grid-layout nav .nav-list li a {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  letter-spacing: 2px;
 }
 
+@media screen and (max-width: 992px) {
+  header .grid-layout nav .nav-list.nav-list {
+    display: none;
+  }
+  header .grid-layout nav {
+    padding: 0;
+  }
+}
 #home {
   position: relative;
 }
@@ -95,7 +113,9 @@ header .grid-layout nav .nav-list li a {
   align-items: center;
   gap: 48px;
 }
-#home .grid-layout .intro .intro-text .botao a {
+#home .grid-layout .intro .intro-text .botao button {
+  position: relative;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,8 +125,12 @@ header .grid-layout nav .nav-list li a {
   border-radius: 2px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#home .grid-layout .intro .intro-text .botao button a {
   color: #fff;
-  font-family: "Inter";
+  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -114,7 +138,22 @@ header .grid-layout nav .nav-list li a {
   letter-spacing: 1.6px;
   text-transform: uppercase;
   letter-spacing: 5px;
-  border-radius: 5px;
+}
+#home .grid-layout .intro .intro-text .botao button:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+#home .grid-layout .intro .intro-text .botao button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(146, 148, 248, 0.4), transparent);
+  transition: all 650ms;
+}
+#home .grid-layout .intro .intro-text .botao button:hover:before {
+  left: 100%;
 }
 #home .grid-layout .intro .intro-text .mouse {
   border: 2px solid #fff;
@@ -151,7 +190,7 @@ header .grid-layout nav .nav-list li a {
   opacity: 1;
   transform: none;
   border-radius: 5px;
-  border: 3px solid #7E5EFF;
+  border: 3px solid #7e5eff;
 }
 #home .grid-layout .intro .card-nft img {
   max-width: 100%;
@@ -162,7 +201,7 @@ header .grid-layout nav .nav-list li a {
 }
 #home .grid-layout .intro .card-nft .eclipse {
   position: absolute;
-  width: 234.903px;
+  width: 450.903px;
   height: 524.934px;
   transform: rotate(40.532deg);
   border-radius: 534.903px;
@@ -175,7 +214,7 @@ header .grid-layout nav .nav-list li a {
 }
 #home .grid-layout .intro .card-nft .eclipse02 {
   position: absolute;
-  width: 544.105px;
+  width: 350.105px;
   height: 515.39px;
   transform: rotate(222.637deg);
   border-radius: 534.903px;
@@ -238,7 +277,9 @@ header .grid-layout nav .nav-list li a {
 #home .grid-layout .intro .card-nft .data-card-nft .text-data-card-nft img span {
   padding-top: 10px;
 }
-#home .grid-layout .intro .card-nft .data-card-nft a {
+#home .grid-layout .intro .card-nft .data-card-nft button {
+  position: relative;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,8 +289,12 @@ header .grid-layout nav .nav-list li a {
   border-radius: 2px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#home .grid-layout .intro .card-nft .data-card-nft button a {
   color: #fff;
-  font-family: "Inter";
+  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -257,7 +302,22 @@ header .grid-layout nav .nav-list li a {
   letter-spacing: 1.6px;
   text-transform: uppercase;
   letter-spacing: 5px;
-  border-radius: 5px;
+}
+#home .grid-layout .intro .card-nft .data-card-nft button:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+#home .grid-layout .intro .card-nft .data-card-nft button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(146, 148, 248, 0.4), transparent);
+  transition: all 650ms;
+}
+#home .grid-layout .intro .card-nft .data-card-nft button:hover:before {
+  left: 100%;
 }
 #home .grid-layout .dashboard {
   background: hsla(0, 0%, 100%, 0.1);
@@ -321,18 +381,38 @@ header .grid-layout nav .nav-list li a {
   color: #d2d2d2;
 }
 
+@media screen and (max-width: 992px) {
+  .card-nft {
+    display: none;
+  }
+  #home .grid-layout .intro .intro-text h1 {
+    font-size: 40px;
+  }
+  #home .grid-layout .intro .intro-text p {
+    font-size: 16px;
+  }
+  #home .grid-layout .dashboard {
+    flex-wrap: wrap;
+  }
+  #home .grid-layout .dashboard .data-dashboard {
+    border-right: none;
+    border-bottom: 2px solid #7F5FFF;
+    -o-border-image: linear-gradient(138.34deg, rgba(86, 9, 240, 0.7) -11.36%, rgba(30, 181, 236, 0.7) 51.55%, rgba(182, 36, 230, 0.7) 113.16%) 1;
+       border-image: linear-gradient(138.34deg, rgba(86, 9, 240, 0.7) -11.36%, rgba(30, 181, 236, 0.7) 51.55%, rgba(182, 36, 230, 0.7) 113.16%) 1;
+  }
+}
 .intro-top-nfts {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
 }
 .intro-top-nfts h1 {
   color: #FFF;
-  font-family: Inter;
+  font-family: "Orbitron";
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   text-align: center;
   line-height: 1.3;
+  letter-spacing: 2px;
 }
 .intro-top-nfts .card-intro-top-nfts {
   display: grid;
@@ -347,9 +427,15 @@ header .grid-layout nav .nav-list li a {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 992px) {
+  .intro-top-nfts .card-intro-top-nfts {
+    flex-wrap: wrap;
+    grid-template-columns: none;
+  }
+}
 .intro-collection {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .intro-collection .title-button-intro-collection {
   padding-top: 4rem;
@@ -365,8 +451,11 @@ header .grid-layout nav .nav-list li a {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: 2px;
 }
-.intro-collection .title-button-intro-collection a {
+.intro-collection .title-button-intro-collection button {
+  position: relative;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,8 +465,12 @@ header .grid-layout nav .nav-list li a {
   border-radius: 2px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.intro-collection .title-button-intro-collection button a {
   color: #fff;
-  font-family: "Inter";
+  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -385,7 +478,22 @@ header .grid-layout nav .nav-list li a {
   letter-spacing: 1.6px;
   text-transform: uppercase;
   letter-spacing: 5px;
-  border-radius: 5px;
+}
+.intro-collection .title-button-intro-collection button:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+.intro-collection .title-button-intro-collection button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(146, 148, 248, 0.4), transparent);
+  transition: all 650ms;
+}
+.intro-collection .title-button-intro-collection button:hover:before {
+  left: 100%;
 }
 .intro-collection .table-intro-collection {
   border-spacing: 0;
@@ -452,6 +560,11 @@ header .grid-layout nav .nav-list li a {
   color: #2DC0DC;
 }
 
+@media screen and (max-width: 992px) {
+  .intro-collection .title-button-intro-collection button {
+    display: none;
+  }
+}
 .intro-faq h4 {
   color: #fff;
   font-family: "Orbitron";
@@ -459,6 +572,7 @@ header .grid-layout nav .nav-list li a {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: 2px;
 }
 .intro-faq .questions-intro-faq {
   max-width: 100%;
@@ -516,8 +630,8 @@ header .grid-layout nav .nav-list li a {
 }
 
 .social-media {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
 }
 .social-media .intro-social-media {
   display: flex;
@@ -540,4 +654,5 @@ header .grid-layout nav .nav-list li a {
 .grid-layout {
   max-width: 1216px;
   margin: 0 auto;
+  padding: 0 1rem;
 }/*# sourceMappingURL=style.css.map */

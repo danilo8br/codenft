@@ -1,7 +1,4 @@
-const faqs = document.querySelectorAll(".questions-intro-faq");
+import { questions } from "./questions.js"
 
-faqs.forEach((faq) => {
-  faq.addEventListener("click", () => {
-    faq.classList.toggle("active");
-  });
-});
+
+questions();

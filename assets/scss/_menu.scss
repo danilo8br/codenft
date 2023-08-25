@@ -1,8 +1,18 @@
 header {
     .grid-layout {
-        .logo {
+        .logo-name {
+            display: flex;
             align-items: center;
+            gap: 6px;
             padding-top: 28px;
+
+            span {
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-family: $font;
+                color: $white;
+            }
         }
         nav {
             @include flexbox-between;
@@ -23,9 +33,20 @@ header {
                         font-style: normal;
                         font-weight: 500;
                         line-height: normal;
+                        letter-spacing: 2px;
                     }
                 }
             }
         }
+    }
+}
+
+@include responsive-tablet() {
+    header .grid-layout nav .nav-list.nav-list {
+        display: none;
+    }
+
+    header .grid-layout nav {
+        padding: 0;
     }
 }

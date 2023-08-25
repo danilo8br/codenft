@@ -1,6 +1,6 @@
 .intro-collection {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 
     .title-button-intro-collection {
         padding-top: 4rem;
@@ -16,9 +16,12 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            letter-spacing: 2px;
         }
 
-        a {
+        button {
+            position: relative;
+            border: none;
             @include flexbox-center;
             width: 200px;
             height: 44px;
@@ -26,16 +29,38 @@
             border-radius: 2px;
             border: none;
             cursor: pointer;
-            color: $white;
-            font-family: "Inter";
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: 1.6px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
             border-radius: 5px;
+            overflow: hidden;
+            a {
+                color: $white;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1.6px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+        }
+
+        button:hover {
+            box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+        }
+
+        button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(146, 148, 248, 0.4), transparent);
+            transition: all 650ms;
+        }
+
+        button:hover:before {
+            left: 100%;
         }
     }
 
@@ -112,5 +137,11 @@
                 }
             }
         }
+    }
+}
+
+@include responsive-tablet() {
+    .intro-collection .title-button-intro-collection button {
+        display: none;
     }
 }

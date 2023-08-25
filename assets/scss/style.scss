@@ -2,4 +2,5 @@
 
 .grid-layout {
     @include grid-layout();
+    padding: 0 1rem;
 }
