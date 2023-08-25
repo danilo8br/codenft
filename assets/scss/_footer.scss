@@ -1,0 +1,26 @@
+.social-media {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .intro-social-media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        .icon-intro-social-media {
+            padding: 0.7rem;
+            border: 1px solid #5433E8;
+            border-radius: 13px;
+            background: #2b2b2b;
+            cursor: pointer;
+    
+            img {
+                max-width: 100%;
+                display: block;
+            }
+        }
+    }
+
+   
+}
