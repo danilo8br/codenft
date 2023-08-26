@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +31,7 @@ header .grid-layout .logo-name span {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
-  font-family: "Orbitron";
+  font-family: "Audiowide";
   color: #fff;
 }
 header .grid-layout nav {
@@ -54,7 +54,7 @@ header .grid-layout nav .nav-list li {
 }
 header .grid-layout nav .nav-list li a {
   color: #fff;
-  font-family: "Orbitron";
+  font-family: "Audiowide";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -87,7 +87,7 @@ header .grid-layout nav .nav-list li a {
 }
 #home .grid-layout .intro .intro-text h1 {
   color: #fff;
-  font-family: "Orbitron";
+  font-family: "Audiowide";
   font-size: 56px;
   font-style: normal;
   font-weight: 400;
@@ -239,7 +239,7 @@ header .grid-layout nav .nav-list li a {
   text-transform: uppercase;
   font-weight: 400;
   color: #fff;
-  font-family: "Orbitron";
+  font-family: "Audiowide";
   padding: 4px;
 }
 #home .grid-layout .intro .card-nft .data-card-nft {
@@ -331,7 +331,7 @@ header .grid-layout nav .nav-list li a {
   justify-content: center;
   text-align: center;
   padding: 1rem 0;
-  font-family: "Orbitron", sans-serif;
+  font-family: "Audiowide";
 }
 #home .grid-layout .dashboard .data-dashboard {
   display: flex;
@@ -406,7 +406,7 @@ header .grid-layout nav .nav-list li a {
 }
 .intro-top-nfts h1 {
   color: #FFF;
-  font-family: "Orbitron";
+  font-family: "Audiowide";
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -446,7 +446,7 @@ header .grid-layout nav .nav-list li a {
 }
 .intro-collection .title-button-intro-collection h4 {
   color: #fff;
-  font-family: "Orbitron";
+  font-family: "Audiowide";
   font-size: 1.563rem;
   font-style: normal;
   font-weight: 400;
@@ -567,7 +567,7 @@ header .grid-layout nav .nav-list li a {
 }
 .intro-faq h4 {
   color: #fff;
-  font-family: "Orbitron";
+  font-family: "Audiowide";
   font-size: 1.563rem;
   font-style: normal;
   font-weight: 400;
