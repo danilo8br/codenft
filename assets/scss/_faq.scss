@@ -1,12 +1,12 @@
 .intro-faq {
     h4 {
-        color: $white;
-        font-family: $font;
+        color: $title;
+        font-family: $font-title;
         font-size: 1.563rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
     .questions-intro-faq {
         max-width: 100%;
@@ -17,13 +17,11 @@
         cursor: pointer;
 
         .question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flexbox-between;
 
             h3 {
-                color: #FFF;
-                font-family: Inter;
+                color: $title;
+                font-family: $font-text;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
@@ -41,7 +39,7 @@
                 list-style: 1.6;
                 font-size: 16px;
                 color: #d2d2d2;
-                font-family: Inter;
+                font-family: $font-text;
             }
         }
     }
