@@ -11,7 +11,7 @@
 This is a challenge from Condelândia, created by iuricode. The challenge is to create an NFT website using current technologies.
 I decided to change Design to practice my UI Design skills.
 
-Challenge link
+Challenge link: <a href="https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia?type=design&node-id=165830%3A3323&mode=design&t=HHqjnfZo3ag7TD8u-1">Clique aqui</a>
 
 ## 💼 Technologies used
 
